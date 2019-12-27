@@ -1,13 +1,14 @@
-public class Fibonacci {
-    public static void main(String[] args) {
-        int n = 10, t1 = 0, t2 = 1;
-        System.out.print("First " + n + " terms: ");
-        for (int i = 1; i <= n; ++i)
-        {
-            System.out.print(t1 + " + ");
-            int sum = t1 + t2;
-            t1 = t2;
-            t2 = sum;
-        }
-    }
+class Fibonacci { 
+    static int fib(int n) 
+    { 
+        if (n <= 1) 
+            return n; 
+        return fib(n - 1) + fib(n - 2); 
+    } 
+  
+    public static void main(String args[]) 
+    { 
+        int n = 9; 
+        System.out.println(fib(n)); 
+    } 
 }
